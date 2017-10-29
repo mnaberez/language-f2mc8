@@ -50,20 +50,28 @@
     'name': 'entity.name.function.label'
   }
   {
-    'match': '#?0x[0-9a-fA-F]+'
-    'name': 'constant.numeric.hex'
+    'match': '(#|\\+|\\s)(0x[\\da-fA-F]+)'
+    'captures':
+      '2':
+        'name': 'constant.numeric.hex'
   }
   {
-    'match': '#?0b[0-1]+'
-    'name': 'constant.numeric.binary'
+    'match': '(#|\\+|\\s)(0b[01]+)'
+    'captures':
+      '2':
+        'name': 'constant.numeric.bin'
   }
   {
-    'match': '#[0-9]+'
-    'name': 'constant.numeric'
+    'match': '(#|\\+|\\s)([\\d]+)'
+    'captures':
+      '2':
+        'name': 'constant.numeric'
   }
   {
-    'match': '#\'.'
-    'name': 'constant.character.string'
+    'match': '(:)([0-7])'
+    'captures':
+      '2':
+        'name': 'constant.numeric.bittest'
   }
 ]
 'scopeName': 'source.assembly.f2mc8.asf2mc8'

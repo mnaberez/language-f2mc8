@@ -23,7 +23,7 @@
     'name': 'comment.line.semicolon'
   }
   {
-    'match': '\.(byte|word)\\b'
+    'match': '\\.(byte|word)\\b'
     'name': 'storage.type'
   }
   {

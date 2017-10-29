@@ -1,4 +1,4 @@
-'fileTypes': []
+'fileTypes': ['asm', 's']
 'foldingStartMarker': '/\\*\\*|\\{\\s*$'
 'foldingStopMarker': '\\*\\*/|^\\s*\\}'
 'name': 'Fujitsu F2MC-8 Assembly (asf2mc8)'

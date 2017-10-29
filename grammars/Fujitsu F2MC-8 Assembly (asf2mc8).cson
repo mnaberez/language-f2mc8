@@ -8,7 +8,7 @@
     'name': 'keyword'
   }
   {
-    'match': '\\b(bbc|bbs|beq|bge|bhs|blo|blt|bn|bne|bp|call|callv|ret|reti)\\b'
+    'match': '\\b(bbc|bbs|bc|beq|bge|bhs|blo|blt|bn|bnc|bne|bnz|bp|bz|call|callv|ret|reti)\\b'
     'name': 'keyword.control'
   }
   {

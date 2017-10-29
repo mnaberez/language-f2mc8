@@ -50,6 +50,12 @@
     'name': 'entity.name.function.label'
   }
   {
+    'match': '(:)([0-7])'
+    'captures':
+      '2':
+        'name': 'constant.numeric.bittest'
+  }
+  {
     'match': '(#|\\+|\\s)(0x[\\da-fA-F]+)'
     'captures':
       '2':
@@ -68,10 +74,10 @@
         'name': 'constant.numeric'
   }
   {
-    'match': '(:)([0-7])'
+    'match': '(#|\\s)(\'.)'
     'captures':
       '2':
-        'name': 'constant.numeric.bittest'
+        'name': 'constant.character.string'
   }
 ]
 'scopeName': 'source.assembly.f2mc8.asf2mc8'

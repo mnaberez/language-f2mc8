@@ -23,7 +23,7 @@
     'name': 'comment.line.semicolon'
   }
   {
-    'match': '\\.(byte|word)\\b'
+    'match': '\\.(ascii|byte|word)\\b'
     'name': 'storage.type'
   }
   {
@@ -44,6 +44,10 @@
   {
     'match': '#?0x[0-9a-fA-F]+'
     'name': 'constant.numeric.hex'
+  }
+  {
+    'match': '#\'.'
+    'name': 'constant.character.string'
   }
 ]
 'scopeName': 'source.assembly.f2mc8.asf2mc8'

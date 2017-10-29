@@ -39,7 +39,7 @@
   }
   {
     'match': '^[A-Za-z_][A-Za-z0-9_]*'
-    'name': 'entity.name.label'
+    'name': 'entity.name.function.label'
   }
   {
     'match': '#?0x[0-9a-fA-F]+'

@@ -1,0 +1,49 @@
+'fileTypes': []
+'foldingStartMarker': '/\\*\\*|\\{\\s*$'
+'foldingStopMarker': '\\*\\*/|^\\s*\\}'
+'name': 'Fujitsu F2MC-8 Assembly (asf2mc8)'
+'patterns': [
+  {
+    'match': '\\b(addc|addcw|and|andw|clrb|clrc|clri|cmp|cmpw|daa|das|dec|decw|divu|inc|incw|jmp|mov|movw|mulu|nop|or|orw|popw|pushw|rolc|rorc|setb|setc|seti|subc|subcw|swap|xch|xchw|xor|xorw)\\b'
+    'name': 'keyword'
+  }
+  {
+    'match': '\\b(bbc|bbs|beq|bge|bhs|blo|blt|bn|bne|bp|call|callv|ret|reti)\\b'
+    'name': 'keyword.control'
+  }
+  {
+    'match': '\.(F2MC8L|area|org)\\b'
+    'name': 'constant.language'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'punctuation.definition.comment'
+    'match': '(;).*$\\n?'
+    'name': 'comment.line.semicolon'
+  }
+  {
+    'match': '\.(byte|word)\\b'
+    'name': 'storage.type'
+  }
+  {
+    'begin': '"'
+    'end': '"'
+    'name': 'string.quoted.double.untitled'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.untitled'
+      }
+    ]
+  }
+  {
+    'match': '^[A-Za-z_][A-Za-z0-9_]*'
+    'name': 'entity.name.label'
+  }
+  {
+    'match': '#?0x[0-9a-fA-F]+'
+    'name': 'constant.numeric.hex'
+  }
+]
+'scopeName': 'source.assembly.f2mc8.asf2mc8'

@@ -12,6 +12,14 @@
     'name': 'keyword.control'
   }
   {
+    'match': '\\b(a|t|ix|ep|r[0-7]|ps|sp)\\b'
+    'name': 'variable.register'
+  }
+  {
+    'match': '@(a|ix|ep)\\b'
+    'name': 'variable.register'
+  }
+  {
     'match': '\.(F2MC8L|area|org)\\b'
     'name': 'constant.language'
   }

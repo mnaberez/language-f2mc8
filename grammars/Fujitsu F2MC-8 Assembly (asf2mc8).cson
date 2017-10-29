@@ -46,6 +46,14 @@
     'name': 'constant.numeric.hex'
   }
   {
+    'match': '#?0b[0-1]+'
+    'name': 'constant.numeric.binary'
+  }
+  {
+    'match': '#[0-9]+'
+    'name': 'constant.numeric'
+  }
+  {
     'match': '#\'.'
     'name': 'constant.character.string'
   }

@@ -4,12 +4,38 @@
 'name': 'Fujitsu F2MC-8 Assembly (asf2mc8)'
 'patterns': [
   {
-    'match': '\\b(addc|addcw|and|andw|clrb|clrc|clri|cmp|cmpw|daa|das|dec|decw|divu|inc|incw|jmp|mov|movw|mulu|nop|or|orw|popw|pushw|rolc|rorc|setb|setc|seti|subc|subcw|swap|xch|xchw|xor|xorw)\\b'
-    'name': 'keyword'
+    'match': '(bc|beq|bge|bhs|blo|blt|bn|bnc|bne|bnz|bp|bz|call|jmp)(\\s+)([^\\d@][a-zA-Z_\\d]+)'
+    'captures':
+      '1':
+        'name': 'keyword.mnemonic'
+      '3':
+        'name': 'entity.name.function.identifier'
   }
   {
-    'match': '\\b(bbc|bbs|bc|beq|bge|bhs|blo|blt|bn|bnc|bne|bnz|bp|bz|call|callv|ret|reti)\\b'
-    'name': 'keyword.control'
+    'match': '(bbc|bbs)\\s+([^\\d@][a-zA-Z_\\d]+:([0-7]))\\s*,\\s*([^\\d][^\\s]+)'
+    'captures':
+      '1':
+        'name': 'keyword.mnemonic'
+      '3':
+        'name': 'constant.numeric.bittest'
+      '4':
+        'name': 'entity.name.function.identifier'
+  }
+  {
+    'match': '(bbc|bbs)\\s+(\\d[x\\da-fA-F]+):([0-7])\\s*,\\s*([^\\d][^\\s]+)'
+    'captures':
+      '1':
+        'name': 'keyword.mnemonic'
+      '2':
+        'name': 'constant.numeric'
+      '3':
+        'name': 'constant.numeric.bittest'
+      '4':
+        'name': 'entity.name.function.identifier'
+  }
+  {
+    'match': '\\b(addc|addcw|and|andw|bbc|bbs|bc|beq|bge|bhs|blo|blt|bn|bnc|bne|bnz|bp|bz|call|callv|clrb|clrc|clri|cmp|cmpw|daa|das|dec|decw|divu|inc|incw|jmp|mov|movw|mulu|nop|or|orw|popw|pushw|ret|reti|rolc|rorc|setb|setc|seti|subc|subcw|swap|xch|xchw|xor|xorw)\\b'
+    'name': 'keyword.mnemonic'
   }
   {
     'match': '\\b(a|t|ix|ep|r[0-7]|ps|sp)\\b'

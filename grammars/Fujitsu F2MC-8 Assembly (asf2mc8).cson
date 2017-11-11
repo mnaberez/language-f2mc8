@@ -4,7 +4,7 @@
 'name': 'Fujitsu F2MC-8 Assembly (asf2mc8)'
 'patterns': [
   {
-    'match': '(bc|beq|bge|bhs|blo|blt|bn|bnc|bne|bnz|bp|bz|call|jmp)(\\s+)([^\\d@][a-zA-Z_\\d]+)'
+    'match': '\\b(bc|beq|bge|bhs|blo|blt|bn|bnc|bne|bnz|bp|bz|call|jmp)(\\s+)([^\\d@][a-zA-Z_\\d]+)'
     'captures':
       '1':
         'name': 'keyword.mnemonic'
@@ -12,7 +12,7 @@
         'name': 'entity.name.function.identifier'
   }
   {
-    'match': '(bbc|bbs)\\s+([^\\d@][a-zA-Z_\\d]+:([0-7]))\\s*,\\s*([^\\d][^\\s]+)'
+    'match': '\\b(bbc|bbs)\\s+([^\\d@][a-zA-Z_\\d]+:([0-7]))\\s*,\\s*([^\\d][^\\s]+)'
     'captures':
       '1':
         'name': 'keyword.mnemonic'
@@ -22,7 +22,7 @@
         'name': 'entity.name.function.identifier'
   }
   {
-    'match': '(bbc|bbs)\\s+(\\d[x\\da-fA-F]+):([0-7])\\s*,\\s*([^\\d][^\\s]+)'
+    'match': '\\b(bbc|bbs)\\s+(\\d[x\\da-fA-F]+):([0-7])\\s*,\\s*([^\\d][^\\s]+)'
     'captures':
       '1':
         'name': 'keyword.mnemonic'

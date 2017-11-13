@@ -1,6 +1,6 @@
 {
   "name": "language-f2mc8",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Atom syntax highlighting for Fujitsu F2MC-8 assembly language",
   "repository": "https://github.com/mnaberez/language-f2mc8",
   "license": "BSD 3-Clause",

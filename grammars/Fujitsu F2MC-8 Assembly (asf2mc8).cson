@@ -82,19 +82,19 @@
         'name': 'constant.numeric.bittest'
   }
   {
-    'match': '(#|\\+|\\-|\\s)(0x[\\da-fA-F]+)'
+    'match': '(#|,|\\+|\\-|\\s)(0x[\\da-fA-F]+)'
     'captures':
       '2':
         'name': 'constant.numeric.hex'
   }
   {
-    'match': '(#|\\+|\\-|\\s)(0b[01]+)'
+    'match': '(#|,|\\+|\\-|\\s)(0b[01]+)'
     'captures':
       '2':
         'name': 'constant.numeric.bin'
   }
   {
-    'match': '(#|\\+|\\-|\\s)([\\d]+)'
+    'match': '(#|,|\\+|\\-|\\s)([\\d]+)'
     'captures':
       '2':
         'name': 'constant.numeric'

@@ -4,7 +4,7 @@
 'name': 'Fujitsu F2MC-8 Assembly (asf2mc8)'
 'patterns': [
   {
-    'match': '\\b(bc|beq|bge|bhs|blo|blt|bn|bnc|bne|bnz|bp|bz|call|jmp)(\\s+)([^\\d@][a-zA-Z_\\d]+)'
+    'match': '(?i)\\b(bc|beq|bge|bhs|blo|blt|bn|bnc|bne|bnz|bp|bz|call|jmp)(\\s+)([^\\d@][a-zA-Z_\\d]+)'
     'captures':
       '1':
         'name': 'keyword.mnemonic'
@@ -12,7 +12,7 @@
         'name': 'entity.name.function.identifier'
   }
   {
-    'match': '\\b(bbc|bbs)\\s+([^\\d@][a-zA-Z_\\d]+:([0-7]))\\s*,\\s*([^\\d][^\\s]+)'
+    'match': '(?i)\\b(bbc|bbs)\\s+([^\\d@][a-zA-Z_\\d]+:([0-7]))\\s*,\\s*([^\\d][^\\s]+)'
     'captures':
       '1':
         'name': 'keyword.mnemonic'
@@ -22,7 +22,7 @@
         'name': 'entity.name.function.identifier'
   }
   {
-    'match': '\\b(bbc|bbs)\\s+(\\d[x\\da-fA-F]+):([0-7])\\s*,\\s*([^\\d][^\\s]+)'
+    'match': '(?i)\\b(bbc|bbs)\\s+(\\d[Xx\\da-fA-F]+):([0-7])\\s*,\\s*([^\\d][^\\s]+)'
     'captures':
       '1':
         'name': 'keyword.mnemonic'
@@ -34,19 +34,19 @@
         'name': 'entity.name.function.identifier'
   }
   {
-    'match': '\\b(addc|addcw|and|andw|bbc|bbs|bc|beq|bge|bhs|blo|blt|bn|bnc|bne|bnz|bp|bz|call|callv|clrb|clrc|clri|cmp|cmpw|daa|das|dec|decw|divu|inc|incw|jmp|mov|movw|mulu|nop|or|orw|popw|pushw|ret|reti|rolc|rorc|setb|setc|seti|subc|subcw|swap|xch|xchw|xor|xorw)\\b'
+    'match': '(?i)\\b(addc|addcw|and|andw|bbc|bbs|bc|beq|bge|bhs|blo|blt|bn|bnc|bne|bnz|bp|bz|call|callv|clrb|clrc|clri|cmp|cmpw|daa|das|dec|decw|divu|inc|incw|jmp|mov|movw|mulu|nop|or|orw|popw|pushw|ret|reti|rolc|rorc|setb|setc|seti|subc|subcw|swap|xch|xchw|xor|xorw)\\b'
     'name': 'keyword.mnemonic'
   }
   {
-    'match': '\\b(a|t|ix|ep|r[0-7]|ps|sp)\\b'
+    'match': '(?i)\\b(a|t|ix|ep|r[0-7]|ps|sp)\\b'
     'name': 'variable.register'
   }
   {
-    'match': '@(a|ix|ep)\\b'
+    'match': '(?i)@(a|ix|ep)\\b'
     'name': 'variable.register'
   }
   {
-    'match': '\.(F2MC8L|area|org)\\b'
+    'match': '(?i)\.(f2mc8l|f2mc8fx|area|org)\\b'
     'name': 'constant.language'
   }
   {
@@ -57,7 +57,7 @@
     'name': 'comment.line.semicolon'
   }
   {
-    'match': '\\.(ascii|byte|word)\\b'
+    'match': '(?i)\\.(ascii|byte|word)\\b'
     'name': 'storage.type'
   }
   {
@@ -82,13 +82,13 @@
         'name': 'constant.numeric.bittest'
   }
   {
-    'match': '(#|,|\\+|\\-|\\s)(0x[\\da-fA-F]+)'
+    'match': '(#|,|\\+|\\-|\\s)(0[xX][\\da-fA-F]+)'
     'captures':
       '2':
         'name': 'constant.numeric.hex'
   }
   {
-    'match': '(#|,|\\+|\\-|\\s)(0b[01]+)'
+    'match': '(#|,|\\+|\\-|\\s)(0[bB][01]+)'
     'captures':
       '2':
         'name': 'constant.numeric.bin'
